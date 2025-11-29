@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta name="contact us " content="customer contact to the shope ">
+        <meta charset="UTF-8">
+        <link rel="icon" href="smile (1).png" type="image/x-icon">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.nin.css" >
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family-Poppins:wght@300:400:500:600:700:800:900&display-swap");
+            *{
+                margin: 0%;
+                padding: 0%;
+                box-sizing: border-box;
+            }
+            :root{
+                --HEADBG:transparent;
+                --HEADCOLOR:rgb(248, 236, 236);
+            }
+            html{
+                font-size: 1rem;
+                font-family:'Courier New', Courier, monospace;
+
+            }
+            body{
+                min-height:100vh;
+               display:flex;
+               flex-flow:nowrap;
+               flex-direction:column;
+               background:linear-gradient(rgb(90, 5, 100),rgb(248, 1, 223),rgb(121, 9, 102));
+              
+               color:var(--HEADCOLOR);
+            }
+            header{
+                background-color:var(--HEADBG);
+                color: var(--HEADCOLOR);
+                
+            }
+            .header-title-line{
+                padding:3rem 2rem;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+
+            }
+            .menu-button{
+                background-color:rgb(155, 125, 125);
+                border: none;
+                /* width: 48px;
+                height: 98px; */
+                display: flex;
+               justify-content: center;
+               align-items: center;
+               position: relative;
+            }
+            .menu-icon,
+            .menu-icon::before,
+            .menu-icon::after
+            {
+                background-color: rgb(204, 182, 196);
+                width: 48px;
+                height:8px;
+                border-radius:3px;
+                position:absolute;
+                transition: all 0.5s;
+            }
+            .menu-icon::before,.menu-icon::after{
+                content: "";
+            }
+            .menu-icon::before{
+                transform: translate(-24px,-12px);
+            }
+            .menu-icon::after{
+                transform: translate(-24px,12px);
+            }
+            .menu-button{
+                transform: translate(-50px,2px);
+            }
+            :is(header:hover,header:focus-within)
+            .menu-icon{
+                background-color:transparent;
+                transform:rotate(720deg);
+            }
+                :is(header:hover,header:focus-within)
+                .menu-icon::before
+                {
+                transform:translate(-20px)rotate(45deg);
+            }
+                        :is(header:hover,header:focus-within)
+                .menu-icon::after
+                {
+                transform:translate(-20px)rotate(-45deg);
+            }
+
+
+               nav ul{
+                   list-style-type:none ;
+                   display: flex;
+                   flex-flow: column nowrap;  
+                    }
+
+            nav li{
+                padding:1rem;
+                /* border-top:2px solid bisque ; */
+            }
+            nav a{
+                display: block;
+                text-align: center;
+                margin: auto;
+              
+            }
+            naV a:any-link{
+                color: bisque;
+                font-weight:900;
+                text-decoration: none;
+                      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                      font-size:1.4rem;
+
+            }
+            nav a:hover,
+            nav a:focus{
+                transform: scale(1.2);
+                transition: all 0.3s;
+            }
+            nav {
+                background-color:var(--HEADBG);
+                display: none;
+                transform-origin: top center;
+                animation: step-end 0.6s ease-in-out forwards;
+            }
+           @keyframes step-end {
+            0%{
+                transform: scale(0);
+            }
+            50%{
+                transform: scale(1.2);
+            }
+            100%{
+                transform:scaleY(1);
+            }
+           }
+        :is(header:hover,header:focus-within)
+         nav{
+            display: block;
+          }   
+
+
+.parent{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    display:  flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    background-color:transparent;
+}
+   #form{
+    padding:5rem;
+    padding-top: 5rem;
+    border: 2px solid #e9cf96cc;
+    border-radius: 10px; 
+    backdrop-filter: blur(100%);
+    box-shadow: 0 0 10px black;
+   }
+   
+
+#form h1{
+    font-size:56px;
+    text-align: center;
+    margin-bottom:2em;
+    margin-top: 0.5rem;
+  
+}
+#form .input{
+    width: 100%;
+    height:70px;
+    /* background-color: black; */
+    margin: 30px 0;
+}
+
+.input input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255);
+    border-radius: 40px;
+    font-size:20px;
+    padding: 20px 5px 20px 80px;
+}
+
+.input input::placeholder{
+    color: bisque;
+}
+
+.message textarea{
+    background-color:bisque;
+    text-align: center;
+    border-radius: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top:1rem ;
+  
+   
+}
+#form .menu{
+    display: flex;
+    justify-content: space-between;
+    font-size:1.2rem;
+    margin:15px 0 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#form .fill input{
+    accent-color:#020202;
+    margin-right:5px;
+}
+
+.menu a{
+    color: aliceblue;
+    text-decoration: none;
+    border: 2px solid white;
+    padding:5px;
+    border-radius: 8px;
+}
+
+.menu a:hover{
+    color: antiquewhite;
+    background-color: #3f3838;
+}
+
+#form .btn{
+    font-size: 1rem;
+    width: 100%;
+    padding:0.8rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+}
+
+.kiki{
+    display: flex;
+    justify-content:space-evenly;
+    padding: 2em;
+}
+.kiki .span{
+  display: flex;
+  justify-content:start;
+  align-items:center;
+  font-size: 3.4rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  padding-left: 2rem;
+}
+
+
+ .kiki img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    outline: 2px solid rgb(254, 251, 255);
+    border: 20px solid rgb(120, 8, 101);
+}
+
+#jiji{
+    margin: 2rem;
+    font-size: 1.6rem;
+    color: rgb(24, 10, 44);
+}
+
+        </style>
+    </head>
+    <body>
+
+    
+            
+    <header>
+        <section class="header-title-line">
+            <h1>contact us</h1>
+            <button class="menu-button">
+                <div class="menu-icon"></div>
+            
+            </button>
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home </a></li>
+            <li><a href="index.html#about">about<abbr title="The Little Tacos Shope">LTS</abbr></a></li>
+            <li><a href="index.html#menu">Our Menu</a></li>
+            <li><a href="store houre.html">Store Houres</a></li>
+            </ul>
+        </nav>
+    </header>
+   
+      <div class="kiki">
+        <figure>
+        <img src="img/download (2).jpg" > 
+        </figure>
+        <h1 class="span"> A Tasty Tacos</h1>
+      </div>
+ <!-- <legend> Send Us A Message</legend> -->
+
+ <div class="parent">
+        <div id="form">
+       
+         <form>
+            <h1> Contact Us</h1>
+            
+                     <div class="input">
+                    <input type="text " placeholder="plz enter your name" required>
+                    <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="input">
+                   <input type="email" placeholder="plz enter your Email" required>
+                   <i class='bx bxs-lock-alt'></i>
+                    </div>
+                     
+
+                   
+
+                    <div class="message">
+                    <textarea rows="10" cols="50">enter your message</textarea>
+                    </div>
+                    
+
+                     <div class="fill">
+                        <label><input type="checkbox">Fill Up All</label>
+                    </div>
+
+                <button type="submit" class="btn">send</button>
+                    
+                <div class="menu"><p>chose the tacose </p> <a href="#menu">menu</a></div>
+
+
+            </table>
+
+         
+        </div>   
+ </div>
+        
+
+
+
+            <footer id="jiji">
+            <h3>Our Location</h3>
+            <address>555 taco temtation lone ,swith 
+                kansta city 55-5598
+                  
+            </address>
+                <i> phone:<a href="2365758-9-807">236787987</a></i>
+            </footer>
+    </body>
+</html>
+<script>
+    
+</script>

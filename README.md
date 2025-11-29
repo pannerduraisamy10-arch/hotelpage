@@ -1,0 +1,2 @@
+# hotelpage
+my hotel page
